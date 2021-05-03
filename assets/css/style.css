@@ -1,0 +1,684 @@
+@font-face
+{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Quicksand Light'), local('Quicksand-Light'), url(../fonts/quicksand-light.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face
+{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Quicksand Regular'), local('Quicksand-Regular'), url(../fonts/quicksand-regular.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+@font-face
+{
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Quicksand Bold'), local('Quicksand-Bold'), url(../fonts/quicksand-bold.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+::-webkit-scrollbar
+{
+    width: 10px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background: #c93636;
+}
+
+::-webkit-scrollbar-track
+{
+    background: #303131;
+}
+
+body
+{
+    width: 100%;
+    height: 100%;
+}
+
+.a-menu
+{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+.a-menu .menu
+{
+    justify-content: space-around;
+    align-items: center;
+    background-color: #272727;
+    box-shadow: -1px 1px 4px #383838;
+    width: 100%;
+    margin: 0 auto;
+    display: inline-flex;
+}
+
+.menu-left
+{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu-left img
+{
+    width: 50px;
+    margin-right: 15px;
+}
+
+.menu-left h1
+{
+    font-family: "Quicksand";
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.menu-right
+{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu-right ul
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-right ul li
+{
+    font-family: "Quicksand";
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s all ease;
+}
+
+.menu-right ul li a
+{
+    color: #fff;
+}
+
+.menu-right ul li::after
+{
+    content: "";
+    width: 0;
+    background-color: #c93636;
+    height: 3px;
+    transition: 0.4s all ease;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.menu-right ul li:hover a
+{
+    transition: 0.4s all ease;
+    color: #c93636;
+}
+
+.menu-right ul li:hover::after
+{
+    width: 40px;
+}
+
+.a-about
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    background-color: #353535;
+}
+
+.about
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    height: 100%;
+    padding: 120px 0;
+    position: relative;
+}
+
+.a-title-about
+{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+
+.a-title-about h2
+{
+    font-family: "Quicksand";
+    font-size: 15px;
+    font-weight: 600;
+    color: #ccc;
+    position: relative;
+    font-size: 40px;
+}
+
+.a-title-about h2::after
+{
+    content: "";
+    width: 100px;
+    background-color: #c93636;
+    height: 3px;
+    transition: 0.4s all ease;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.a-text-about
+{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.a-text-about p
+{
+    font-family: "Quicksand";
+    line-height: 1.3em;
+    font-size: 16px;
+    color: #afafaf;
+    letter-spacing: 1px;
+}
+
+.a-text-about p:last-child
+{
+    margin-top: 30px;
+}
+
+.works-about
+{
+    display: flex;
+    margin-top: 40px;
+}
+
+.works-about button
+{
+    background-color: #c93636;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-family: "Quicksand";
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s all ease;
+    border: 1px solid #c93636;
+}
+
+.works-about button a
+{
+    color: #fff;
+}
+
+.works-about button:hover
+{
+    background-color: transparent;
+    border: 1px solid #c93636;
+}
+
+.works-about button:hover a
+{
+    transition: 0.4s all ease;
+    color: #c93636;
+}
+
+.a-circle-back-about
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 20px solid #c936364d;
+    position: absolute;
+    left: -100px;
+    top: calc(50% - 200px);
+}
+
+.a-circle-back-about-two
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 20px solid #c936364d;
+    position: absolute;
+    left: 0px;
+    top: calc(50% - 200px);
+}
+
+.a-services
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #303131;
+}
+
+.services
+{
+    padding: 70px 0;
+    width: 1000px;
+    text-align: center;
+}
+
+.a-title-services
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+.a-title-services h2
+{
+    font-family: "Quicksand";
+    font-size: 15px;
+    font-weight: 600;
+    color: #ccc;
+    position: relative;
+    font-size: 40px;
+}
+
+.a-title-services h2::after
+{
+    content: "";
+    width: 100px;
+    background-color: #c93636;
+    height: 3px;
+    transition: 0.4s all ease;
+    position: absolute;
+    bottom: -15px;
+    left: calc(50% - 50px);
+}
+
+.a-text-services
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.a-text-services p
+{
+    font-family: "Quicksand";
+    line-height: 1.5em;
+    font-size: 16px;
+    color: #afafaf;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.a-items-services
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.a-item-services,
+.b-item-services,
+.c-item-services,
+.d-item-services
+{
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px);
+    margin: 5px;
+    height: 250px;
+    border-radius: 4px;
+    text-align: left;
+    background-color: #2e95c5;
+    padding: 40px 50px;
+    box-sizing: border-box;
+}
+
+.b-item-services
+{
+    background-color: #404040;    
+}
+
+.c-item-services
+{
+    background-color: #c346ab;
+}
+
+.d-item-services
+{
+    background-color: #2aab50;
+}
+
+.a-item-services i,
+.b-item-services i,
+.c-item-services i,
+.d-item-services i
+{
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.a-item-services h3,
+.b-item-services h3,
+.c-item-services h3,
+.d-item-services h3
+{
+    font-family: "Quicksand";
+    font-weight: 600;
+    color: #fff;
+    font-size: 28px;
+}
+
+.a-item-services p,
+.b-item-services p,
+.c-item-services p,
+.d-item-services p
+{
+    font-family: "Quicksand";
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.a-workPrevious
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #353535;
+}
+
+.workPrevious
+{
+    padding: 70px 0;
+    width: 1300px;
+    text-align: center;
+}
+
+.a-title-workPrevious
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+.a-title-workPrevious h2
+{
+    font-family: "Quicksand";
+    font-size: 15px;
+    font-weight: 600;
+    color: #ccc;
+    position: relative;
+    font-size: 40px;
+}
+
+.a-title-workPrevious h2::after
+{
+    content: "";
+    width: 100px;
+    background-color: #c93636;
+    height: 3px;
+    transition: 0.4s all ease;
+    position: absolute;
+    bottom: -15px;
+    left: calc(50% - 50px);
+}
+
+.a-item-workPrevious ::-webkit-scrollbar-track
+{
+    background: transparent; 
+}
+
+.a-item-workPrevious ::-webkit-scrollbar-thumb
+{
+    background: transparent; 
+}
+
+.a-item-workPrevious
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+.item-workPrevious
+{
+    display: flex;
+    width: calc(100% - 10px);
+    margin: 5px;
+    border-radius: 4px;
+    text-align: left;
+    padding: 40px 50px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.item-workPrevious.rowReverse
+{
+    flex-direction: row-reverse;
+}
+
+.item-left-workPrevious
+{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    justify-content: center;
+}
+
+.item-left-workPrevious h3
+{
+    font-family: "Quicksand";
+    font-weight: 600;
+    color: #ffff;
+    position: relative;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+.item-left-workPrevious h3::after
+{
+    content: "";
+    width: 100px;
+    background-color: #c93636;
+    height: 3px;
+    transition: 0.4s all ease;
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+}
+
+.item-workPrevious.rowReverse h3,
+.item-workPrevious.rowReverse h3::after
+{
+    text-align: left;
+    left: 0;
+}
+
+.item-left-workPrevious p
+{
+    font-family: "Quicksand";
+    line-height: 1.5em;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.item-right-workPrevious
+{
+    width: 50%;
+    display: flex;
+    height: 300px;
+    position: relative;
+    overflow: overlay;
+    border-radius: 6px;
+    box-shadow: 0px 0px 22px #020202;
+}
+
+.item-right-workPrevious img
+{
+    width: 100%;
+    position: absolute;
+}
+
+.a-contact
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #303131;
+    padding: 70px 0px 40px 0px;
+}
+
+.contact
+{
+    width: 1300px;
+    text-align: center;
+}
+
+.a-title-contact
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.a-title-contact h2
+{
+    font-family: "Quicksand";
+    font-weight: 600;
+    color: #ccc;
+    position: relative;
+    font-size: 40px;
+}
+
+.a-title-contact h2::after
+{
+    content: "";
+    width: 100px;
+    background-color: #c93636;
+    height: 3px;
+    transition: 0.4s all ease;
+    position: absolute;
+    bottom: -15px;
+    left: calc(50% - 50px);
+}
+
+.form-contact
+{
+    margin: 50px;
+    display: flex;
+}
+
+.form-contact form
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.a-input-contact
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.a-input-contact.submit
+{
+    align-items: flex-end;
+}
+
+.a-input-contact label
+{
+    margin: 20px 0 10px;
+    font-family: "Quicksand";
+    font-size: 16px;
+    color: #CCCCCC;
+}
+
+.a-input-contact input[type="text"],
+.a-input-contact textarea
+{
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Quicksand";
+    font-size: 16px;
+    color: #fff;
+    background-color: #424242;
+    border-radius: 2px;
+    box-shadow: 0px 0px 10px #232323;
+    outline: none;
+}
+
+.a-input-contact textarea
+{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 150px;
+    height: 150px;
+    min-height: 150px;
+}
+
+.a-input-contact input[type="submit"]
+{
+    margin-top: 20px;
+    background-color: #c93636;
+    color: #fff;
+    padding: 12px 80px;
+    border-radius: 4px;
+    font-family: "Quicksand";
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s all ease;
+    border: 1px solid #c93636;
+}
+
+.a-input-contact input[type="submit"]:hover
+{
+    background-color: transparent;
+    color: #c93636;
+    border: 1px solid #c93636;
+}
